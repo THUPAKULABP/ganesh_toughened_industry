@@ -1,8 +1,0 @@
-{
-    "database_path": "ganesh_toughened_industry.db",
-    "backup_directory": "backups",
-    "auto_backup": true,
-    "backup_retention_days": 90,
-    "connection_timeout": 30,
-    "max_connections": 5
-}
