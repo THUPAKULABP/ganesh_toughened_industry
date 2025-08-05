@@ -1,6 +1,6 @@
 import tkinter as tk
 from tkinter import ttk
-from datetime import datetime, date
+from datetime import datetime, date, timedelta  # Add timedelta import
 from theme import ClaymorphismTheme
 
 class DashboardModule:
@@ -167,9 +167,9 @@ class DashboardModule:
         
         # Get last day of current month
         if current_month == 12:
-            last_day = date(current_year + 1, 1, 1) - datetime.timedelta(days=1)
+            last_day = date(current_year + 1, 1, 1) - timedelta(days=1)  # Fixed: Use timedelta directly
         else:
-            last_day = date(current_year, current_month + 1, 1) - datetime.timedelta(days=1)
+            last_day = date(current_year, current_month + 1, 1) - timedelta(days=1)  # Fixed: Use timedelta directly
         
         monthly_invoices = self.db.search_invoices(
             from_date=first_day.strftime("%Y-%m-%d"),
