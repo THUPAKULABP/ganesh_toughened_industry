@@ -112,6 +112,13 @@ class ClaymorphismTheme:
                          highlightthickness=0)
         shadow.place(x=2, y=2, relwidth=1, relheight=1)
         
+        # Process kwargs to extract width and height if present
+        button_kwargs = {}
+        if 'width' in kwargs:
+            button_kwargs['width'] = kwargs.pop('width')
+        if 'height' in kwargs:
+            button_kwargs['height'] = kwargs.pop('height')
+        
         # Button
         button = tk.Button(button_frame, text=text, 
                           bg=ClaymorphismTheme.BG_BUTTON,
@@ -125,10 +132,10 @@ class ClaymorphismTheme:
                           pady=8,
                           cursor="hand2",
                           command=command,
-                          **kwargs)
+                          **button_kwargs)
         button.pack(fill="both", expand=True)
         
-        return button_frame
+        return button_frame, button
 
     @staticmethod
     def create_entry(parent, placeholder="", **kwargs):
@@ -140,6 +147,11 @@ class ClaymorphismTheme:
                          highlightthickness=0)
         shadow.place(x=2, y=2, relwidth=1, relheight=1)
         
+        # Process kwargs to extract width if present
+        entry_kwargs = {}
+        if 'width' in kwargs:
+            entry_kwargs['width'] = kwargs.pop('width')
+        
         # Entry
         entry = tk.Entry(entry_frame, 
                          bg=ClaymorphismTheme.BG_SECONDARY,
@@ -147,7 +159,7 @@ class ClaymorphismTheme:
                          relief="flat",
                          borderwidth=0,
                          font=ClaymorphismTheme.FONT_NORMAL,
-                         **kwargs)
+                         **entry_kwargs)
         entry.pack(fill="both", expand=True, padx=5, pady=5)
         
         if placeholder:
