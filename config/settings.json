@@ -1,0 +1,18 @@
+{
+    "company_name": "GANESH TOUGHENED INDUSTRY",
+    "company_address": "Plot No B13, Madanapalle Industrial Estate, Kammapalle, Madanapalle, Annamayya district, Andhra Pradesh state - 517325",
+    "company_phone": "9398530499, 7013374872",
+    "company_gst": "37EXFPK2395C1ZE",
+    "upi_id": "7013374872-3@axl",
+    "upi_name": "GANESH TOUGHENED INDUSTRY",
+    "bank_name": "INDIAN BANK",
+    "bank_account": "7347800060",
+    "bank_ifsc": "IDIB000M001",
+    "bank_branch": "Madanapalle",
+    "invoice_prefix": "GTI",
+    "backup_enabled": true,
+    "backup_frequency": "12hours",
+    "backup_interval_hours": 12,
+    "theme": "default",
+    "language": "en"
+}
